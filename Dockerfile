@@ -7,7 +7,8 @@ RUN apt-get update && \
     apt-get install -y wget openjdk-7-jre-headless libc6-i386 lib32stdc++6 && \
     apt-get clean && \
     apt-get autoclean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
+    export  LD_LIBRARY_PATH="/opt/android-sdk-linux/tools/lib64:$LD_LIBRARY_PATH"
 
 # Install android tools + sdk
 ENV ANDROID_HOME /opt/android-sdk-linux
