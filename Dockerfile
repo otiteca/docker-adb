@@ -1,6 +1,6 @@
 FROM debian:latest
 
-MAINTAINER softsam
+MAINTAINER otiteca
 
 # Install all dependencies
 RUN apt-get update && \
